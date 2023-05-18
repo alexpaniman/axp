@@ -29,7 +29,7 @@ namespace axp {
     public:
         exception(fmt::string_view format, formatted_types&&... printed_data,
                   axp::source_location location = axp::current_location())
-            : m_message(fmt::vformat(format, fmt::make_format_args(FWD(printed_data)...))),
+            : m_message(fmt::vformat(format, fmt::make_format_args(printed_data...))),
               m_error_location(location) {}
 
         const char* what() const noexcept final {
