@@ -17,7 +17,7 @@
       src = ./.;
 
       nativeBuildInputs = with pkgs; [ clang-tools ];
-      buildInputs = with pkgs; [];
+      buildInputs = with pkgs; [ fmt ];
     };
 
   };
